@@ -53,7 +53,7 @@ class AdvancedImageCrawler(GoogleImageCrawler):
             *args,
             **kwargs)
 
-with open(r'/kaggle/working/a-ba-ner/documents/vlsp/train.txt','r',encoding='utf8') as f:
+with open(r'documents\vlsp\train.text','r',encoding='utf8') as f:
     lines = f.readlines()
 
 # need image size > 224
