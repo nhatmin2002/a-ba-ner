@@ -59,7 +59,7 @@ with open(r'documents\vlsp\train.text','r',encoding='utf8') as f:
 # need image size > 224
 filters = dict(size=">640x480")
 for idx,item in enumerate(lines):
-    google_crawler = AdvancedImageCrawler(storage={'root_dir': r'data\vlsp'},
+    google_crawler = AdvancedImageCrawler(storage={'root_dir': r'data/vlsp/'},
                                         feeder_threads=1, parser_threads=1, downloader_threads=1)
     google_crawler.crawl(keyword=combine_text_with_pos(item).strip(),filters=filters, max_num=1,overwrite=True,file_idx_offset='auto',language='vi',idx=idx)
 
